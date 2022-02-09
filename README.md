@@ -9,6 +9,7 @@ Using this terraform template we can provision AWS Elasticsearch service with Ki
 
 Note: Fine-grained access control can only be enabled on new domains. Once enabled, it cannot be disabled.
 
+![SECAI-ES-API - Terraform-aws-es](https://user-images.githubusercontent.com/25388109/153174972-02069299-60a3-4530-9a0f-9d8c06132a50.png)
 
 ## Variables input are as follows:
 
