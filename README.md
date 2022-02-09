@@ -16,19 +16,19 @@ Note: Fine-grained access control can only be enabled on new domains. Once enabl
 |------|-------------|:----:|:-----:|:-----:|
 | advanced_options | Key-value string pairs to specify advanced configuration options | map(string) | `<map>` | no |
 | automated_snapshot_start_hour | Hour at which automated snapshots are taken, in UTC | number | `0` | no |
-| availability_zone_count | Number of Availability Zones for the domain to use. | number | `2` | no |
+| availability_zone_count | Number of Availability Zones for the domain to use. | number | `3` | no |
 | dedicated_master_count | Number of dedicated master nodes in the cluster | number | `0` | no |
 | dedicated_master_enabled | Indicates whether dedicated master nodes are enabled for the cluster | bool | `false` | no |
-| dedicated_master_type | Instance type of the dedicated master nodes in the cluster | string | `t2.small.elasticsearch` | no |
+| dedicated_master_type | Instance type of the dedicated master nodes in the cluster | string | `r5.large.elasticsearch` | no |
 | ebs_iops | The baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type | number | `0` | no |
-| ebs_volume_size | EBS volumes for data storage in GB | number | `0` | no |
+| ebs_volume_size | EBS volumes for data storage in GB | number | `25` | no |
 | ebs_volume_type | Storage type of EBS volumes | string | `gp2` | no |
-| elasticsearch_version | Version of Elasticsearch to deploy | string | `6.5` | no |
+| elasticsearch_version | Version of Elasticsearch to deploy | string | `7.10` | no |
 | enabled | Set to false to prevent the module from creating any resources | bool | `true` | no |
 | encrypt_at_rest_enabled | Whether to enable encryption at rest | bool | `true` | no |
 | encrypt_at_rest_kms_key_id | The KMS key ID to encrypt the Elasticsearch domain with. If not specified, then it defaults to using the AWS/Elasticsearch service KMS key | string | `` | no |
 | instance_count | Number of data nodes in the cluster | number | `4` | no |
-| instance_type | Elasticsearch instance type for data nodes in the cluster | string | `t2.small.elasticsearch` | no |
+| instance_type | Elasticsearch instance type for data nodes in the cluster | string | `r5.large.elasticsearch` | no |
 | log_publishing_application_cloudwatch_log_group_arn | ARN of the CloudWatch log group to which log for ES_APPLICATION_LOGS needs to be published | string | `` | no |
 | log_publishing_application_enabled | Specifies whether log publishing option for ES_APPLICATION_LOGS is enabled or not | bool | `false` | no |
 | log_publishing_index_cloudwatch_log_group_arn | ARN of the CloudWatch log group to which log for INDEX_SLOW_LOGS needs to be published | string | `` | no |
