@@ -157,6 +157,9 @@ variable "dedicated_master_type" {
 }
 
 
+variable "master_user_name" {}
+variable "master_user_password" {}
+
 
 locals {
   index_slow_log_group_arn     = var.index_slow_log_group_arn

@@ -1,7 +1,3 @@
-provider "aws" {
-  region = var.aws_region
-}
-
 data "aws_region" "current" {}
 
 data "aws_caller_identity" "current" {}
@@ -27,8 +23,8 @@ resource "aws_elasticsearch_domain" "secai_elasticsearch" {
     enabled                        = var.advanced_security_options_enabled
     internal_user_database_enabled = var.internal_user_database_enabled
     master_user_options {
-      master_user_name     = "SecurityAI@hamoye-23"
-      master_user_password = "Barbarbarbar1!"
+      master_user_name     = var.master_user_name
+      master_user_password = var.master_user_password
     }
   }
 
