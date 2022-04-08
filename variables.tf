@@ -31,13 +31,13 @@ variable "elasticsearch_version" {
 variable "instance_type" {
   type        = string
   description = "Elasticsearch instance type for data nodes in the cluster"
-  default     = "r5.large.elasticsearch"
+  default     = "t2.micro.elasticsearch"
 }
 
 variable "instance_count" {
   type        = number
   description = "Number of data nodes in the cluster"
-  default     = 4
+  default     = 1
 }
 
 variable "zone_awareness_enabled" {
@@ -49,7 +49,7 @@ variable "zone_awareness_enabled" {
 variable "availability_zone_count" {
   description = "Number of availability zones used for data nodes (default 2)"
   type        = number
-  default     = 3
+  default     = 2
 }
 
 variable "ebs_enabled" {
@@ -61,7 +61,7 @@ variable "ebs_enabled" {
 variable "ebs_volume_size" {
   type        = number
   description = "EBS volumes for data storage in GB"
-  default     = 25
+  default     = 20
 }
 
 variable "ebs_volume_type" {
@@ -152,7 +152,7 @@ variable "dedicated_master_count" {
 
 variable "dedicated_master_type" {
   type        = string
-  default     = "r5.large.elasticsearch"
+  default     = "t2.micro.elasticsearch"
   description = "Instance type of the dedicated master nodes in the cluster"
 }
 
