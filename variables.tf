@@ -49,7 +49,7 @@ variable "zone_awareness_enabled" {
 variable "availability_zone_count" {
   description = "Number of availability zones used for data nodes (default 2)"
   type        = number
-  default     = 2
+  default     = 3
 }
 
 variable "ebs_enabled" {
